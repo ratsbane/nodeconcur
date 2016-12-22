@@ -1,0 +1,98 @@
+doug@galahad:~/nodeconcur$ ./z
+A
+Sending query for names starting with A.  concurrencyCount is now 1
+Sending query for names starting with B.  concurrencyCount is now 2
+Sending query for names starting with C.  concurrencyCount is now 3
+Sending query for names starting with D.  concurrencyCount is now 4
+Sending query for names starting with E.  concurrencyCount is now 5
+Sending query for names starting with F.  concurrencyCount is now 6
+Sending query for names starting with G.  concurrencyCount is now 7
+Sending query for names starting with H.  concurrencyCount is now 8
+Sending query for names starting with I.  concurrencyCount is now 9
+Sending query for names starting with J.  concurrencyCount is now 10
+Sending query for names starting with K.  concurrencyCount is now 11
+Sending query for names starting with L.  concurrencyCount is now 12
+Sending query for names starting with M.  concurrencyCount is now 13
+Sending query for names starting with N.  concurrencyCount is now 14
+Sending query for names starting with O.  concurrencyCount is now 15
+Sending query for names starting with P.  concurrencyCount is now 16
+Sending query for names starting with Q.  concurrencyCount is now 17
+Sending query for names starting with R.  concurrencyCount is now 18
+Sending query for names starting with S.  concurrencyCount is now 19
+Sending query for names starting with T.  concurrencyCount is now 20
+Sending query for names starting with U.  concurrencyCount is now 21
+Sending query for names starting with V.  concurrencyCount is now 22
+Sending query for names starting with W.  concurrencyCount is now 23
+Sending query for names starting with X.  concurrencyCount is now 24
+Sending query for names starting with Y.  concurrencyCount is now 25
+Sending query for names starting with Z.  concurrencyCount is now 26
+Connection established
+count is 50
+Got rows {"A":223445} and concurrencyCount is now 25
+count is 99
+count is 149
+Got rows {"B":278424} and concurrencyCount is now 24
+count is 199
+Got rows {"C":263428} and concurrencyCount is now 23
+count is 248
+count is 298
+Got rows {"D":153315} and concurrencyCount is now 22
+count is 348
+count is 397
+Got rows {"E":82882} and concurrencyCount is now 21
+count is 447
+Got rows {"F":132638} and concurrencyCount is now 20
+count is 496
+count is 546
+Got rows {"G":141720} and concurrencyCount is now 19
+count is 596
+Got rows {"H":209179} and concurrencyCount is now 18
+count is 645
+count is 695
+Got rows {"I":30013} and concurrencyCount is now 17
+count is 745
+count is 794
+Got rows {"J":91780} and concurrencyCount is now 16
+count is 844
+Got rows {"K":109650} and concurrencyCount is now 15
+count is 893
+count is 943
+Got rows {"L":135072} and concurrencyCount is now 14
+count is 993
+count is 1043
+Got rows {"M":259051} and concurrencyCount is now 13
+count is 1092
+Got rows {"N":95961} and concurrencyCount is now 12
+count is 1142
+count is 1192
+Got rows {"O":46654} and concurrencyCount is now 11
+count is 1241
+Got rows {"P":161658} and concurrencyCount is now 10
+count is 1291
+count is 1340
+Got rows {"Q":7128} and concurrencyCount is now 9
+count is 1390
+count is 1439
+Got rows {"R":259387} and concurrencyCount is now 8
+count is 1489
+Got rows {"S":463217} and concurrencyCount is now 7
+count is 1539
+count is 1588
+Got rows {"T":122395} and concurrencyCount is now 6
+count is 1638
+Got rows {"U":43764} and concurrencyCount is now 5
+count is 1687
+count is 1737
+Got rows {"V":45304} and concurrencyCount is now 4
+count is 1787
+count is 1836
+Got rows {"W":216034} and concurrencyCount is now 3
+count is 1886
+Got rows {"X":1512} and concurrencyCount is now 2
+count is 1936
+count is 1985
+Got rows {"Y":15233} and concurrencyCount is now 1
+count is 2035
+Got rows {"Z":14293} and concurrencyCount is now 0
+Ending now.
+
