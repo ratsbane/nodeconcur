@@ -18,7 +18,7 @@ startTimeoutLoop = function() { count++;
                               };
 
 var count=0;
-console.log(String.fromCharCode(65));
+
 var connection = mysql.createConnection({
   host: "localhost",
   user: "node",
