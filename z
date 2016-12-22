@@ -1,0 +1,58 @@
+#!/usr/bin/nodejs
+
+var mysql = require("mysql");
+var http = require('http');
+
+// Uncomment to use with web instead of command line
+// var app = http.createServer(function(req,res){
+//    res.setHeader('Content-Type', 'application/json');
+//    res.send('[');   // This starts sending a JSON array
+// });
+
+var concurrencyCount = 0;
+
+startTimeoutLoop = function() { count++;
+                              setTimeout( function () {startTimeoutLoop(); }, 20 );
+                              // Uncomment to use with web instead of command line
+                              // res.send('{"nothing":0},');   // send http response with empty json atom
+                              };
+
+var count=0;
+console.log(String.fromCharCode(65));
+var connection = mysql.createConnection({
+  host: "localhost",
+  user: "node",
+  password: "fjfjfjfj"
+});
+
+connection.connect(function(err){
+  if(err){
+    console.log('Error connecting to Db');
+    return;
+  }
+  console.log('Connection established');
+});
+
+setInterval( function() {console.log("count is "+count);}, 1000);
+
+for(var i=65; i<91; ++i) {  // Iterate through ASCII character codes A-Z
+   concurrencyCount++;
+   console.log("Sending query for names starting with " + String.fromCharCode(i) + ".  concurrencyCount is now " + concurrencyCount );
+   connection.query("select count(*) as '"+String.fromCharCode(i)+"' from airwho.aircraft where registrantname like '"+String.fromCharCode(i)+"%'",
+          function(err, rows, fields) { concurrencyCount--;
+                                        console.log('Got rows '+JSON.stringify(rows[0])+' and concurrencyCount is now ' + concurrencyCount);
+                                        // Uncomment to use with web instead of command line
+                                        // res.send(JSON.stringify(rows[0]));
+                                        if (concurrencyCount == 0) {
+                                                                     // Uncomment to use with web instead of command line
+                                                                     // res.send(']');  // Finish the JSON array
+                                                                     console.log('Ending now.');
+                                                                     process.exit();
+                                                                   }
+                                      }
+          );
+   }
+
+startTimeoutLoop();
+
+
